@@ -1,0 +1,36 @@
+@mixin transform($property...) {
+    transform: $property;
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -o-transform: $property;
+}
+@mixin transformWithPrefix($property) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}transform: #{$prefix}#{$property};
+    }
+}
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+@mixin transitionWithPrefix($property, $duration, $cubic) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}transition: #{$prefix}#{$property} $duration $cubic;
+    }
+}
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}

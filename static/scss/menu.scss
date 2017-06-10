@@ -1,0 +1,155 @@
+@import './mixin.scss';
+
+/*
+*add by leo zhang 20170606
+*/
+
+#menu {
+    $menu-width: 80%;
+    width: $menu-width;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 80;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    contain: strict;
+    will-change: transform, -webkit-transform;
+    @include transitionWithPrefix(transform, .3s, cubic-bezier(0, 0, 0.2, 1));
+    @include transform(translate3d(0, 0, 0));
+    &.menu-enter,
+    &.menu-leave-active {
+        @include transform(translate3d(-100%, 0, 0));
+    }
+    &.menu-leave {
+        @include transitionWithPrefix(transform, .3s, cubic-bezier(0.4, 0, 0.6, 1));
+    }
+    .menu-inner {
+        background: #fff;
+        left: 0;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include transform(translate3d(0, 0, 0));
+        //contain: strict;
+    }
+    .log-rm {
+        position: relative;
+        background: #f1f1f1;
+        padding: 20px
+    }
+    .log-rm .btn {
+        display: inline-block;
+        width: 100%;
+        height: 38px;
+        border: 1px solid #9e9e9c;
+        background: #f1f1f1;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 36px;
+        color: #636463;
+        pointer-events: auto;
+        -webkit-transform: none;
+        transform: none
+    }
+    .not-login .btn {
+        width: 6.14357rem
+    }
+    .not-login .btn:active,
+    .not-login .btn.active {
+        background: #4a90e2;
+        border: 1px solid #4a90e2;
+        color: #fff;
+        pointer-events: auto
+    }
+    .log-rm>div {
+        height: 38px;
+        line-height: 38px;
+        pointer-events: none
+    }
+    .log-rm .tel {
+        height: auto;
+        line-height: 1;
+        padding-left: 56px;
+        padding-bottom: 5px;
+        background: url(https://static.zhongan.com/website/public/zero/v1.0/images/call_gray@2x.png) no-repeat;
+        background-size: 24px auto;
+        background-position: 24px center
+    }
+    .log-rm .tel span {
+        display: inline-block;
+        padding-top: 5px
+    }
+    .log-rm .tel span:last-child {
+        letter-spacing: 3px;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0
+    }
+    list {
+        position: relative;
+        overflow: auto
+    }
+    .list a,
+    .list span {
+        position: relative;
+        height: 55px;
+        line-height: 55px;
+        display: block;
+        background: #fff;
+        text-indent: 50px;
+        color: #636463;
+        border-bottom: 1px solid #dfdede;
+        font-size: 16px;
+    }
+    .list span {
+        height: 24px;
+        line-height: 24px;
+        background: #f1f1f1;
+        text-indent: 20px;
+        color: #b9b9b9;
+        font-size: 12px;
+        display: block;
+    }
+    .list a:before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 20px;
+        top: 17px;
+        background: url(https://static.zhongan.com/website/public/zero/v1.0/images/menu-icons.png) 0px center no-repeat;
+        background-size: 100% auto
+    }
+    .list .home:before {
+        background-position: 0px -4px
+    }
+    .list .pdcenter:before {
+        background-position: 0px -26px
+    }
+    .list .policySearch:before {
+        background-position: 0px -49px
+    }
+    .list .claim:before {
+        background-position: 0px -72px
+    }
+    .list .qrcode:before {
+        background-position: 0px -95px
+    }
+    .list .feedback:before {
+        background-position: 0px -118px
+    }
+    .list .about:before {
+        background-position: 0px -141px
+    }
+    a {
+        text-decoration: none;
+    }
+}
