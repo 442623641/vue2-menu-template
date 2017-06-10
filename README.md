@@ -1,6 +1,6 @@
 # vue2 menu demo
 This is a demo project demonstrating the usage of [vue2 module](https://cn.vuejs.org/).
-> The following comonents are implemented # [Demo](http://139.196.8.187/zhan).
+> The following comonents are implemented # [Demo](http://139.196.8.187/zhan).(chrome mobile model)
 
 1.slide menu
 
