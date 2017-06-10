@@ -1,17 +1,25 @@
 # zhan
 
-> vue2 menu demo
+# vue2 menu demo
 This is a demo project demonstrating the usage of [vue2 module](https://cn.vuejs.org/).
-The following comonents are implemented
+> The following comonents are implemented
 
 1.slide menu
+
 2.swiper
+
 3.page transition
+
 4.scroll
+
 5.refresh
+
 6.infinite
 
-#[Demo](http://139.196.8.187/zhan).
+7.loading
+
+
+# [Demo](http://139.196.8.187/zhan).
 
 To use this project:
 ``` bash
