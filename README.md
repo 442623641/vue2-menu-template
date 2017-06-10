@@ -1,8 +1,6 @@
-# zhan
-
 # vue2 menu demo
 This is a demo project demonstrating the usage of [vue2 module](https://cn.vuejs.org/).
-> The following comonents are implemented
+> The following comonents are implemented # [Demo](http://139.196.8.187/zhan).
 
 1.slide menu
 
@@ -17,7 +15,6 @@ This is a demo project demonstrating the usage of [vue2 module](https://cn.vuejs
 6.infinite
 
 7.loading
-
 
 # [Demo](http://139.196.8.187/zhan).
 
